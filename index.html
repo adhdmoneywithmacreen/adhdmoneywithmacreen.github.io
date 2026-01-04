@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find $500+ you forgot about in just 5 days. Free ADHD-friendly money challenge. No budgeting, no shame, just results.">
+    <title>Find $500+ You Forgot About | ADHD Money Reset</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fafafa;
+        }
+        
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            padding: 40px 20px 20px;
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 2.2em;
+            color: #1a237e;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .subheadline {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .benefits h2 {
+            font-size: 1.6em;
+            color: #1a237e;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f8f9ff;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .benefit-icon {
+            font-size: 24px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+        
+        .benefit-text {
+            flex-grow: 1;
+        }
+        
+        .benefit-day {
+            font-weight: 600;
+            color: #1a237e;
+            margin-bottom: 4px;
+        }
+        
+        /* Form Section */
+        .form-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 50px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            color: white;
+            text-align: center;
+        }
+        
+        .form-section h2 {
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        
+        .form-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .email-form {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #333;
+        }
+        
+        input::placeholder {
+            color: #999;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px 30px;
+            font-size: 18px;
+            font-weight: 600;
+            background: #FFD700;
+            color: #1a237e;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+        }
+        
+        .form-disclaimer {
+            font-size: 0.9em;
+            margin-top: 15px;
+            opacity: 0.9;
+        }
+        
+        /* Perfect For Section */
+        .perfect-for {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .perfect-for h2 {
+            font-size: 1.6em;
+            color: #1a237e;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .perfect-for ul {
+            list-style: none;
+        }
+        
+        .perfect-for li {
+            padding: 12px 0 12px 35px;
+            position: relative;
+            font-size: 1.05em;
+            color: #444;
+        }
+        
+        .perfect-for li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+            font-size: 1.3em;
+        }
+        
+        /* About Section */
+        .about {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .about h2 {
+            font-size: 1.6em;
+            color: #1a237e;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            font-size: 1.05em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        .faq h2 {
+            font-size: 1.6em;
+            color: #1a237e;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        
+        .faq-question {
+            font-weight: 600;
+            color: #1a237e;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .faq-answer {
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px 20px;
+            color: #666;
+        }
+        
+        .social-links {
+            margin-bottom: 15px;
+        }
+        
+        .social-links a {
+            display: inline-block;
+            margin: 0 10px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .social-links a:hover {
+            color: #764ba2;
+        }
+        
+        /* Success Message */
+        .success-message {
+            display: none;
+            background: #4caf50;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.7em;
+            }
+            
+            .subheadline {
+                font-size: 1.05em;
+            }
+            
+            .benefits, .form-section, .perfect-for, .about, .faq {
+                padding: 30px 20px;
+            }
+            
+            .benefit-item {
+                padding: 12px;
+            }
+            
+            .form-section h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="profile-image">💰</div>
+            <h1>Find $500+ You Forgot About in Just 5 Days</h1>
+            <p class="subheadline">No budgeting required. No shame. Just a treasure hunt through your own money.</p>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" id="successMessage">
+            🎉 Success! Check your email (including spam) for your first challenge!
+        </div>
+
+        <!-- Benefits Section -->
+        <div class="benefits">
+            <h2>Here's what you'll discover:</h2>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">📱</div>
+                <div class="benefit-text">
+                    <div class="benefit-day">Day 1: The Subscription Audit</div>
+                    <div>Find subscriptions draining $100-200/month you completely forgot about</div>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">💳</div>
+                <div class="benefit-text">
+                    <div class="benefit-day">Day 2: The Refund Hunt</div>
+                    <div>Uncover refunds and store credits you never claimed</div>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">🏦</div>
+                <div class="benefit-text">
+                    <div class="benefit-day">Day 3: Account Archaeology</div>
+                    <div>Discover old accounts with money still sitting there</div>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-text">
+                    <div class="benefit-day">Day 4: Get Your Money Back</div>
+                    <div>Find companies that owe you money (and exactly how to get it)</div>
+                </div>
+            </div>
+            
+            <div class="benefit-item">
+                <div class="benefit-icon">🛡️</div>
+                <div class="benefit-text">
+                    <div class="benefit-day">Day 5: Future Money Shield</div>
+                    <div>Build a system so this never happens again</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Section -->
+        <div class="form-section">
+            <h2>Ready to find your forgotten money?</h2>
+            <p>Join the 5-day challenge and start recovering your money today</p>
+            
+            <form class="email-form" id="signupForm" method="POST">
+                <div class="form-group">
+                    <input type="text" name="fields[first_name]" placeholder="Your First Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email_address" placeholder="Your Email Address" required>
+                </div>
+                <button type="submit" class="submit-btn">Yes! Send Me The 5-Day Challenge</button>
+                <p class="form-disclaimer">Free. 5 daily emails. Unsubscribe anytime.</p>
+            </form>
+        </div>
+
+        <!-- Perfect For Section -->
+        <div class="perfect-for">
+            <h2>This challenge is perfect if you:</h2>
+            <ul>
+                <li>Have ADHD and money feels chaotic</li>
+                <li>Suspect you're losing money but don't know where</li>
+                <li>Start budgets but never finish them</li>
+                <li>Feel ashamed about your finances</li>
+                <li>Want a system that works WITH your brain, not against it</li>
+                <li>Are tired of paying the "ADHD tax"</li>
+            </ul>
+        </div>
+
+        <!-- About Section -->
+        <div class="about">
+            <h2>Hi, I'm [Your Name] 👋</h2>
+            <p>I have ADHD too. I've lost thousands of dollars to subscriptions I forgot I signed up for, late fees because I forgot to pay bills, and money sitting in old accounts I forgot existed.</p>
+            <p>I created this challenge to help you stop the financial chaos. It's not about discipline. It's about systems that work for ADHD brains.</p>
+            <p><strong>This challenge has helped people recover an average of $400-800 in forgotten money.</strong></p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">How much time will this take?</div>
+                <div class="faq-answer">15-25 minutes per day. Each challenge is designed specifically for ADHD attention spans.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">What if I don't find $500?</div>
+                <div class="faq-answer">Most people find between $200-800. Even if you find $50, that's $50 you didn't have yesterday!</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Do I need to know anything about finance?</div>
+                <div class="faq-answer">Nope. If you can check your email and bank account, you can do this challenge.</div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Is this really free?</div>
+                <div class="faq-answer">Yes! Completely free. No credit card required. Just your email so I can send you the daily challenges.</div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="social-links">
+                <a href="https://instagram.com/yourusername" target="_blank">📱 Instagram</a>
+                <a href="mailto:your@email.com">✉️ Email</a>
+            </div>
+            <p>© 2026 [Your Name]. Built for ADHD brains. ❤️</p>
+        </div>
+    </div>
+
+    <script>
+        // IMPORTANT: Replace YOUR_FORM_ID with your actual ConvertKit form ID
+        // Example: If your form URL is app.convertkit.com/forms/123456/subscriptions
+        // Then YOUR_FORM_ID is 123456
+        
+        const CONVERTKIT_FORM_ID = 'YOUR_FORM_ID';
+        const form = document.getElementById('signupForm');
+        
+        form.action = `https://app.convertkit.com/forms/${CONVERTKIT_FORM_ID}/subscriptions`;
+        
+        form.addEventListener('submit', function(e) {
+            // The form will submit naturally to ConvertKit
+            // Show success message after a brief delay
+            setTimeout(function() {
+                document.getElementById('successMessage').classList.add('show');
+                document.getElementById('successMessage').scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'center' 
+                });
+                
+                // Hide success message after 5 seconds
+                setTimeout(function() {
+                    document.getElementById('successMessage').classList.remove('show');
+                }, 5000);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
