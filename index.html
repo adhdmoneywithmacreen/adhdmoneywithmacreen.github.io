@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Find $500+ you forgot about in just 5 days. Free ADHD-friendly money challenge. No budgeting, no shame, just results.">
-    <title>Find $500+ You Forgot About | ADHD Money Reset</title>
+    <title>Find $500+ You Forgot About in 5 Days | ADHD Money Reset</title>
     <style>
         * {
             margin: 0;
-            <title>Find $500+ You Forgot About | ADHD Money Reset</title>
+            padding: 0;
             box-sizing: border-box;
         }
         
@@ -220,9 +220,7 @@
             margin-bottom: 30px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
-        <h2>Hi, I'm [Your Name] 👋</h2>
-<!-- Change to: -->
-<h2>Hi, I'm Macreen 👋</h2>
+        
         .about h2 {
             font-size: 1.6em;
             color: #1a237e;
@@ -251,17 +249,13 @@
             text-align: center;
         }
         
-        .<a href="https://instagram.com/yourusername" target="_blank">📱 Instagram</a>
-<!-- Change to: -->
-<a href="https://instagram.com/adhdmoneywithmacreen" target="_blank">📱 Instagram</a> {
+        .faq-item {
             margin-bottom: 20px;
             padding-bottom: 20px;
             border-bottom: 1px solid #eee;
         }
         
-        .<a href="mailto:your@email.com">✉️ Email</a>
-<!-- Change to: -->
-<a href="mailto:adhdmoneycoach@gmail.com.com">✉️ Email</a> {
+        .faq-item:last-child {
             border-bottom: none;
             padding-bottom: 0;
         }
@@ -277,9 +271,7 @@
             color: #555;
             line-height: 1.6;
         }
-        <p>© 2026 [Your Name]. Built for ADHD brains. ❤️</p>
-<!-- Change to: -->
-<p>© 2026 Sarah Johnson. Built for ADHD brains. ❤️</p>
+        
         /* Footer */
         .footer {
             text-align: center;
@@ -347,7 +339,7 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <div class="profile-image">💰</div>
+            <div class="profile-image">M</div>
             <h1>Find $500+ You Forgot About in Just 5 Days</h1>
             <p class="subheadline">No budgeting required. No shame. Just a treasure hunt through your own money.</p>
         </div>
@@ -434,7 +426,7 @@
 
         <!-- About Section -->
         <div class="about">
-            <h2>Hi, I'm [Your Name] 👋</h2>
+            <h2>Hi, I'm Macreen 👋</h2>
             <p>I have ADHD too. I've lost thousands of dollars to subscriptions I forgot I signed up for, late fees because I forgot to pay bills, and money sitting in old accounts I forgot existed.</p>
             <p>I created this challenge to help you stop the financial chaos. It's not about discipline. It's about systems that work for ADHD brains.</p>
             <p><strong>This challenge has helped people recover an average of $400-800 in forgotten money.</strong></p>
@@ -468,26 +460,26 @@
         <!-- Footer -->
         <div class="footer">
             <div class="social-links">
-                <a href="https://instagram.com/yourusername" target="_blank">📱 Instagram</a>
-                <a href="mailto:your@email.com">✉️ Email</a>
+                <a href="https://instagram.com/adhdmoneywithmacreen" target="_blank">📱 Instagram</a>
+                <a href="mailto:adhdmoneycoach@gmail.com">✉️ Email</a>
             </div>
-            <p>© 2026 [Your Name]. Built for ADHD brains. ❤️</p>
+            <p>© 2026 Macreen. Built for ADHD brains. ❤️</p>
         </div>
     </div>
 
     <script>
-        // IMPORTANT: Replace YOUR_FORM_ID with your actual ConvertKit form ID
-        // Example: If your form URL is app.convertkit.com/forms/123456/subscriptions
-        // Then YOUR_FORM_ID is 123456
+        // IMPORTANT: YOU MUST ADD YOUR CONVERTKIT FORM ID HERE
+        // Get it from ConvertKit: Grow → Forms → Your Form → Settings
+        // It's a 6-7 digit number like 6789123
+        // Replace YOUR_FORM_ID below with that number
         
-        const CONVERTKIT_FORM_ID = 'YOUR_FORM_ID';
+        const CONVERTKIT_FORM_ID = 'f238eec848';
         const form = document.getElementById('signupForm');
         
         form.action = `https://app.convertkit.com/forms/${CONVERTKIT_FORM_ID}/subscriptions`;
         
         form.addEventListener('submit', function(e) {
-            // The form will submit naturally to ConvertKit
-            // Show success message after a brief delay
+            // Show success message after form submits
             setTimeout(function() {
                 document.getElementById('successMessage').classList.add('show');
                 document.getElementById('successMessage').scrollIntoView({ 
