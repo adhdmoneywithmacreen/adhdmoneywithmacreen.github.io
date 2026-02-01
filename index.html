@@ -394,21 +394,20 @@
             </div>
         </div>
 
-        <!-- Form Section -->
-        <div class="form-section">
-            <h2>Ready to find your forgotten money?</h2>
-            <p>Join the 5-day challenge and start recovering your money today</p>
-            
-            <form class="email-form" id="signupForm" method="POST">
-                <div class="form-group">
-                    <input type="text" name="fields[first_name]" placeholder="Your First Name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email_address" placeholder="Your Email Address" required>
-                </div>
-                <button type="submit" class="submit-btn">Yes! Send Me The 5-Day Challenge</button>
-                <p class="form-disclaimer">Free. 5 daily emails. Unsubscribe anytime.</p>
-            </form>
+        <!-- Email Form Section -->
+<form class="email-form" id="signupForm" action="https://landing.mailerlite.com/webforms/submit/YOUR_FORM_ID" method="POST">
+    <input type="hidden" name="ml-submit" value="1">
+    <input type="hidden" name="anticsrf" value="true">
+    
+    <div class="form-group">
+        <input type="text" name="fields[name]" placeholder="Your First Name" required>
+    </div>
+    <div class="form-group">
+        <input type="email" name="fields[email]" placeholder="Your Email Address" required>
+    </div>
+    <button type="submit" class="submit-btn">Yes! Send Me The 5-Day Challenge</button>
+    <p class="form-disclaimer">Free. 5 daily emails. Unsubscribe anytime.</p>
+</form>
         </div>
 
         <!-- Perfect For Section -->
@@ -473,7 +472,7 @@
         // It's a 6-7 digit number like 6789123
         // Replace YOUR_FORM_ID below with that number
         
-        const MAILERLITE_FORM_ID = 'he4TEF';
+        const MAILERLITE_FORM_ID = '178082663012239268';
         const form = document.getElementById('signupForm');
         
         form.action = `https://app.mailerlite.com/forms/${MAILERLITE_FORM_ID}/subscriptions`;
