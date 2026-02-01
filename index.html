@@ -468,15 +468,15 @@
     </div>
 
     <script>
-        // IMPORTANT: YOU MUST ADD YOUR CONVERTKIT FORM ID HERE
-        // Get it from ConvertKit: Grow → Forms → Your Form → Settings
+        // IMPORTANT: YOU MUST ADD YOUR MAILERLITE FORM ID HERE
+        // Get it from Mailerlite: Grow → Forms → Your Form → Settings
         // It's a 6-7 digit number like 6789123
         // Replace YOUR_FORM_ID below with that number
         
-        const CONVERTKIT_FORM_ID = '8934131';
+        const MAILERLITE_FORM_ID = 'he4TEF';
         const form = document.getElementById('signupForm');
         
-        form.action = `https://app.convertkit.com/forms/${CONVERTKIT_FORM_ID}/subscriptions`;
+        form.action = `https://app.mailerlite.com/forms/${MAILERLITE_FORM_ID}/subscriptions`;
         
         form.addEventListener('submit', function(e) {
             // Show success message after form submits
